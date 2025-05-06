@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Flask App</h1>
+    {% if request.cookies.get('token') %}
+        <p>You are logged in. <a href="{{ url_for('dashboard') }}">Go to Dashboard</a></p>
+    {% else %}
+        <p>Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('signup') }}">sign up</a> to continue.</p>
+    {% endif %}
+{% endblock %} 

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+    <p>Welcome, {{ username }}!</p>
+    <p>Your gem balance: {{ gems }}</p>
+    <p><a href="{{ url_for('transfer') }}">Transfer Gems</a></p>
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+{% endblock %} 
